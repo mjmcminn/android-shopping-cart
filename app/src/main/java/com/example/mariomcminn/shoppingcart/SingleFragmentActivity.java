@@ -11,7 +11,6 @@ import android.util.Log;
  * Created by mariomcminn on 2/18/16.
  */
 public abstract class SingleFragmentActivity extends FragmentActivity {
-    private static final String TAG = "SingleFragmentActivity";
     protected abstract Fragment createFragment();
     @Override
     public void onCreate(Bundle savedInstanceState) {

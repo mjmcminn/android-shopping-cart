@@ -4,8 +4,9 @@
     <string name="cart_title">Shopping Cart</string>
     <string name="cart_quantity_label">Quantity</string>
     <string name="cart_priority_label">Priority</string>
+    <string name="add_cart_item_label">Add Item</string>
+    <string name="add_cart_item_hint">Add item to cart</string>
     <string name="cart_quantity_hint">How many would you like?</string>
-    <string name="cart_priority_hint2">1 for MOST and 7 for LEAST</string>
     <string name="cart_priority_hint">1 for MOST and 7 for LEAST</string>
     <string name="item_quantity_title">Quantity:</string>
     <string name="item_priority_title">Priority:</string>
@@ -13,4 +14,8 @@
     <string name="cart_begin">Begin Shopping</string>
     <string name="begin_shopping">Start</string>
     <string name="cart_finished">Shopping complete</string>
+    <string name="cart_view">View Cart</string>
+    <string name="delete_cart_item">Delete Cart Item</string>
+    <string name="view_cart_items">View Cart</string>
+    <string name="delete_cart_items">Delete Cart</string>
 </resources>

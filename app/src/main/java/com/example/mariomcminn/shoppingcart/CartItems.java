@@ -7,89 +7,65 @@ import java.util.UUID;
 /**
  * Created by mariomcminn on 2/18/16.
  */
-public class CartItems implements Comparator<CartItems>, Comparable<CartItems>  {
+public class CartItems {
 
-    private String itemName;
-    private int itemPri;
-    private double itemCost;
+    private String mItemName;
+    private double mItemCost;
+    private int mQuantity;
+    private int mPriority;
     private UUID mId;
-    private String mQuantity;
-    private String mPriority;
-    private Date mDate;
-    private boolean mSolved;
+
 
     CartItems(){
         mId = UUID.randomUUID();
-        mDate = new Date();
     }
 
-    CartItems(String n, int p, double i){
-        itemName = n;
-        itemPri = p;
-        itemCost = i;
+    CartItems(String n, int q, int p, double c){
+        mItemName = n;
+        mQuantity = q;
+        mPriority = p;
+        mItemCost = c;
     }
 
     public String getItemName(){
-        return itemName;
+        return mItemName;
     }
 
-    public int getItemPri(){
-        return itemPri;
+    public void setItemName(String itemName){
+        mItemName = itemName;
     }
 
-    public double getItemCost() {
-        return itemCost;
-    }
-
-    public UUID getId(){
-
-        return mId;
-    }
-
-    public String getQuantity(){
-
-        return mQuantity;
-    }
-
-    public void setQuantity(String quantity){
-
-        mQuantity = quantity;
-    }
-
-    @Override
-    public String toString(){
-
-        return mQuantity;
-    }
-
-    public String getmPriority() {
+    public int getPriority() {
         return mPriority;
     }
 
-    public void setmPriority(String mPriority) {
-        this.mPriority = mPriority;
+    public void setPriority(int priority) {
+        mPriority = priority;
     }
 
-    public Date getDate() {
-        return mDate;
+    public int getQuantity() {
+        return mQuantity;
     }
-    public void setDate(Date date) {
-        mDate = date;
+
+    public void setQuantity(int quantity) {
+        mQuantity = quantity;
     }
-    public boolean isSolved() {
-        return mSolved;
+
+    public double getItemCost() {
+        return mItemCost;
     }
-    public void setSolved(boolean solved) {
-        mSolved = solved;
+
+    public void setItemCost(double cost) {
+        mItemCost = cost;
+    }
+
+    public UUID getId() {
+        return mId;
     }
 
     @Override
-    public int compareTo(CartItems c) {
-        return (this.itemName).compareTo(c.getItemName());
+    public String toString() {
+        return mItemName;
     }
 
-    @Override
-    public int compare(CartItems c1, CartItems c2) {
-        return c1.itemPri - c2.itemPri;
-    }
 }

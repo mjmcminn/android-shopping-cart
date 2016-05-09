@@ -25,13 +25,13 @@ public class CartContents {
         CartItems c6 = new CartItems();
         CartItems c7 = new CartItems();
         //Title of list element
-        c1.setQuantity("Axe");
-        c2.setQuantity("Chainsaw");
-        c3.setQuantity("Crossbow");
-        c4.setQuantity("Hammer");
-        c5.setQuantity("Machete");
-        c6.setQuantity("Shovel");
-        c7.setQuantity("Toothpick");
+        c1.setItemName("Axe @ $40");
+        c2.setItemName("Chainsaw @ $50");
+        c3.setItemName("Crossbow @ $70");
+        c4.setItemName("Hammer @ $20");
+        c5.setItemName("Machete @ $30");
+        c6.setItemName("Shovel @ $25");
+        c7.setItemName("Toothpick @ $0.05");
         //Adding titles to list to display in adapter
         mCart.add(c1);
         mCart.add(c2);
@@ -47,7 +47,6 @@ public class CartContents {
         if (sCartContents == null){
             sCartContents = new CartContents(c.getApplicationContext());
         }
-
         return sCartContents;
     }
 
@@ -55,11 +54,4 @@ public class CartContents {
         return mCart;
     }
 
-    public CartItems getCart(UUID id){
-        for (CartItems c : mCart){
-            if (c.getId().equals(id))
-                return c;
-        }
-        return null;
-    }
 }
